@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เปย์เกม - เอไอแปลเกม</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="brand">เอไอแปลเกม</a>
+        <ul class="nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="mods.html">ม็อด</a></li>
+            <li><a href="donate.html">เปย์เกม</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h2 style="justify-content: space-between;">
+                <span>เปย์เกมให้ผู้พัฒนาม็อด</span>
+                <i class="fas fa-heart" style="color: var(--primary-blue); font-size: 1.3rem;"></i>
+            </h2>
+            
+            <div class="info-box" style="margin-bottom: 2rem; background: rgba(255, 255, 255, 0.02); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-blue);">
+                <p>เนื่องจากเพจของเรา <span class="highlight-red">**ไม่รับโดเนทเป็นเงินสดทุกกรณี**</span> หากคุณชื่นชอบและประทับใจผลงานแปลเกมด้วย AI ของเรา และต้องการสนับสนุนการทำงาน สามารถส่งมอบความสุขกลับมาให้เราด้วยการส่งเกมเป็นของขวัญ (Gift Game) ผ่าน Steam ได้เลยค่ะ</p>
+            </div>
+
+            <!-- หน้าตาการ์ดดีไซน์ Steam แบบพรีเมียม -->
+            <div class="steam-card">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 1rem;">
+                    <i class="fab fa-steam" style="font-size: 2.5rem; color: #66c0f4;"></i>
+                    <div>
+                        <h3 style="color: #ffffff; margin: 0; font-size: 1.4rem;">Steam Community Profile</h3>
+                        <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 2px;">ค้นหาชื่อโปรไฟล์ด้านล่างนี้ในแอปพลิเดชัน Steam เพื่อเพิ่มเพื่อนและส่งของขวัญ</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1.5rem;">
+                    <div class="steam-name-box" style="margin-top: 0; background: #0b0e14; border: 1px solid #2a3547;">
+                        <div>
+                            <span class="steam-label">ชื่อโปรไฟล์สำหรับค้นหา (Profile Name)</span>
+                            <div id="steam-username" style="color: #ffffff; font-weight: 800; font-size: 1.6rem; letter-spacing: 0.5px;">pat_aiplaegame</div>
+                        </div>
+                    </div>
+                    <!-- ปุ่มสำหรับ Copy ชื่อโปรไฟล์อัตโนมัติ -->
+                    <button onclick="copySteamName()" class="btn" style="padding: 1.1rem 2rem; border-radius: 8px; cursor: pointer; border: none; display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="far fa-copy"></i> คัดลอกชื่อโปรไฟล์
+                    </button>
+                </div>
+            </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer></footer>
+
+</body>
+</html>

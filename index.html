@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เอไอแปลเกม - หน้าแรก</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="brand">เอไอแปลเกม</a>
+        <ul class="nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="mods.html">ม็อด</a></li>
+            <li><a href="donate.html">เปย์เกม</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <!-- เปลี่ยนมาเรียกใช้รูปภาพโลโก้ตามต้องการ -->
+        <img class="header-logo" src="./data/logo.png" alt="เอไอแปลเกม Logo">
+        <div class="header-text">
+            <h1>เอไอแปลเกม</h1>
+            <p>แปลเกมด้วยเอไอ</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- ม็อดล่าสุด -->
+        <section>
+            <h2>ม็อดล่าสุด</h2>
+            <div id="latest-mods-grid" class="mod-grid">
+                <!-- ดึงข้อมูลมาจาก JavaScript -->
+            </div>
+            <div class="btn-center">
+                <a href="mods.html" class="btn">ดูทั้งหมด</a>
+            </div>
+        </section>
+
+        <!-- ช่องทางสนับสนุน -->
+        <section>
+            <h2>ช่องทางสนับสนุน</h2>
+            <div class="info-box">
+                <p class="highlight-red">**ไม่รับโดเนท**</p>
+                <p style="font-size: 1.1rem; color: var(--white); margin-bottom: 1rem;">แต่เปย์เกมเค้าได้นะคะ</p>
+                <div class="steam-name-box" style="margin-top: 0;">
+                    <div>
+                        <span class="steam-label">ชื่อโปรไฟล์ Steam</span>
+                        <div style="color: var(--white); font-weight: bold;">pat_aiplaegame</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ช่องทางติดตาม -->
+        <section>
+            <h2>ช่องทางติดตาม</h2>
+            <ul class="social-links">
+                <li class="social-item">
+                    <a href="https://www.facebook.com/profile.php?id=61590584616206" target="_blank">
+                        <span style="margin-right: 10px;">📘</span> เพจเฟสบุ๊ค เอไอแปลเกม
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a href="https://www.nexusmods.com/profile/AiPlaeGame" target="_blank">
+                        <span style="margin-right: 10px;">📦</span> NexusMods: AiPlaeGame
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

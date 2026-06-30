@@ -1,0 +1,333 @@
+:root {
+    --bg-dark: #0b111e;
+    --bg-card: #151f32;
+    --primary-blue: #00d2ff;
+    --deep-blue: #0066ff;
+    --accent-glow: rgba(0, 210, 255, 0.4);
+    --text-main: #f0f4f8;
+    --text-muted: #94a3b8;
+    --text-danger: #ff4a4a;
+    --white: #ffffff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    
+    margin: 0;
+    padding: 0;
+    font-family: "Google Sans", sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(21, 31, 50, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .brand {
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, var(--white), var(--primary-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Header */
+.header {
+    background: radial-gradient(circle at top right, rgba(0, 102, 255, 0.15), transparent),
+                linear-gradient(180deg, #111a2e 0%, var(--bg-dark) 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.header-logo {
+    width: 110px;
+    height: 110px;
+    background: linear-gradient(135deg, var(--deep-blue), var(--primary-blue));
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    box-shadow: 0 0 30px var(--accent-glow);
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
+}
+
+.header:hover .header-logo {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.header-text h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    color: var(--primary-blue);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+/* Container & Sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    padding: 0 1.5rem;
+    width: 100%;
+    flex: 1;
+}
+
+section {
+    margin-top: 3rem;
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    color: var(--white);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+section h2::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 24px;
+    background: linear-gradient(to bottom, var(--primary-blue), var(--deep-blue));
+    border-radius: 4px;
+}
+
+/* Mod Cards Grid */
+.mod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.mod-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.mod-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-blue);
+    box-shadow: 0 12px 25px rgba(0, 210, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.mod-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.mod-card:hover img {
+    transform: scale(1.03);
+}
+
+.mod-card h3 {
+    padding: 1.25rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--white);
+    flex-grow: 1;
+}
+
+/* Modern Button */
+.btn-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.btn {
+    background: linear-gradient(90deg, var(--deep-blue), var(--primary-blue));
+    color: var(--white);
+    padding: 0.8rem 2.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--accent-glow);
+    filter: brightness(1.1);
+}
+
+/* Content Information styles */
+.info-box {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+.highlight-red {
+    color: var(--text-danger);
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.social-item a {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-item a:hover {
+    background: rgba(0, 210, 255, 0.08);
+    border-color: var(--primary-blue);
+    transform: translateX(5px);
+}
+
+/* Modern Steam Deck Card for Pay Game Page */
+.steam-card {
+    background: linear-gradient(135deg, #171a21 0%, #25282e 100%);
+    color: #c7d5e0;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #3a3f47;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    margin-bottom: 2.5rem;
+}
+
+.steam-name-box {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    background: #101216;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(102, 192, 244, 0.2);
+}
+
+.steam-label {
+    color: #66c0f4;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.wishlist-tag {
+    display: inline-block;
+    background: rgba(0, 210, 255, 0.1);
+    color: var(--primary-blue);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #070b13;
+    padding: 2rem;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
