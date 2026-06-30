@@ -2,31 +2,31 @@
     {
       "id": 1,
       "title": "Fear The Timeloop",
-      "image": "./data/Fear The Timeloop.jpg",
+      "image": "./data/FearTheTimeloop.jpg",
       "link": "https://www.nexusmods.com/fearthetimeloop/mods/3"
     },
     {
       "id": 2,
       "title": "The Evil Within 2",
-      "image": "./data/TEW2 copy.jpg",
+      "image": "./data/TEW2copy.jpg",
       "link": "https://www.nexusmods.com/theevilwithin2/mods/30"
     },
     {
       "id": 3,
       "title": "Darwin's Paradox",
-      "image": "./data/Darwin's Paradox.jpg",
+      "image": "./data/Darwin'sParadox.jpg",
       "link": "https://www.nexusmods.com/darwinsparadox/mods/5"
     },
     {
       "id": 4,
       "title": "Spirit of the North",
-      "image": "./data/Spirit of the North.jpg",
+      "image": "./data/SpiritoftheNorth.jpg",
       "link": "https://www.nexusmods.com/spiritofthenorth/mods/4"
     },
     {
       "id": 5,
       "title": "Deathloop",
-      "image": "./data/deathloop.jpg",
+      "image": "./data/Deathloop.jpg",
       "link": "https://www.nexusmods.com/deathloop/mods/13"
     }
   ]
