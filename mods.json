@@ -26,7 +26,13 @@
     {
       "id": 5,
       "title": "Deathloop",
-      "image": "./data/Deathloop.jpg",
+      "image": "./data/deathloop.jpg",
       "link": "https://www.nexusmods.com/deathloop/mods/13"
+    },
+    {
+      "id": 6,
+      "title": "God of War 2",
+      "image": "./data/god2.jpg",
+      "link": "https://www.nexusmods.com/godofwar2/mods/16"
     }
   ]
